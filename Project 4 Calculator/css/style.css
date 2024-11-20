@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightblue;
+}
+
+.container {
+    width: 280px;
+    height: 480px;
+    background: #3B4554;
+    border-radius: 10px;
+    padding: 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px -1px 84px 10px rgba(0,0,0,1);
+}
+
+.container .resultRow {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.container .resultRow #result {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: none;
+    border: 0;
+    color: white;
+    text-align: right;
+    font-size: 25px;
+}
+
+.container .row {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .row .button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 0px solid white;
+    border-radius: 10px;
+    color: white;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container .row .operation, .container .row .deleteOne, .container .row .clear, .container .row .dot {
+    color: #33ffd8;
+}
+
+.container .row .equals {
+    width: 113px;
+}

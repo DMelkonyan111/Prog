@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    height: 1000px;
+    background-image: url(../img/antique-cafe-bg-01.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 20px;
+    text-align: right;
+}
+
+nav {
+    background: none;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: background-color 0.2s ease-in;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 100px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 0;
+    color: #CC9966;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+nav ul li a::after {
+    content: ' ';
+    display: inline-block;
+    height: var(--someheight, 0px);
+    width: 100%;
+    background: #CC9966;
+    transform: scaleX(1.5);
+    transition: 0.2s ease;
+}
+
+nav ul li a:hover::after {
+    height: 3px;
+}
+
+nav .menuToggle {
+    color: #CC9966;
+    margin: 10px;
+    margin-right: 15px;
+    font-size: 40px;
+    display: none;
+}
+
+.headerContent {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerContent > div {
+    width: 430px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.headerContent .cafeName {
+    padding: 20px;
+}
+
+.headerContent .cafeName h1 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin: 30px 0 15px;
+}
+
+.headerContent .cafeName p {
+    color: #CC9966;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.headerContent .cafeDescription {
+    padding: 40px;
+}
+
+.headerContent .cafeDescription p {
+    text-align: left;
+    color: white;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.headerContent .cafeDescription p span {
+    color: #FF6;
+    cursor: pointer;
+}
+
+.headerContent .cafeDescription p span:hover {
+    color: #9FF;
+}
+
+
+.headerContent button {
+    width: 225px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 0;
+    border-radius: 10px;
+    color: #CC9966;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.headerContent button:hover {
+    color: white;
+}
+
+.menuSection {
+    background-image: url(../img/antique-cafe-bg-02.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 100px;
+}
+
+.menuSection .sectionNameDiv {
+    width: 350px;
+    height: 90px;
+    background: white;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.menuSection .sectionNameDiv h2 {
+    font-size: 35px;
+    font-weight: 500;
+    color: #544639;
+} 
+
+.menuSection .content {
+    display: flex;
+    justify-content: center;
+}
+
+.menuSection .content .leftSide, .menuSection .content .rightSide {
+    width: 520px;
+    background: #544639;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 40px;
+    padding: 20px 0;
+}
+
+.menuSection .content .coffee {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 15px 30px;
+}
+
+.menuSection .content .rightSide .coffee {
+    justify-content: flex-end;
+}
+
+.menuSection .content .leftSide .coffee img {
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.menuSection .content .rightSide .coffee img {
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.menuSection .content .rightSide .coffee .coffeeInfo {
+    text-align: right;
+}
+
+.menuSection .content .coffee .coffeeInfo .name {
+    color: #FFCC66;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menuSection .content .coffee .coffeeInfo .price {
+    color: white;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.aboutSection {
+    height: 1000px;
+    background-image: url(../img/antique-cafe-bg-03.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+}
+
+.aboutSection .content {
+    width: 50%;
+}
+
+.infoBox {
+    width: 520px;
+    padding: 50px 50px 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin-top: 200px;
+    margin-left: 30px;
+}
+
+.infoBox h2 {
+    color: #006666;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.infoBox p {
+    line-height: 2;
+    margin: 30px 0;
+}
+
+.infoBox p span {
+    color: #066;
+    cursor: pointer;
+}
+
+.infoBox p span:hover {
+    color: #F36;
+}
+
+.aboutSection .content button {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 170px;
+    height: 50px;
+    background-color: #006666;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.aboutSection .content button:hover {
+    background-color: #0a8585;
+}
+
+.contactSection {
+    background-image: url(../img/antique-cafe-bg-04.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contactSection .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contactSection .content .infoBox {
+    margin: 40px;
+    margin-top: 200px;
+}
+
+.contactSection .content .infoBox p {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.contactSection .content .infoBox p span:hover {
+    color: #006666;
+}
+
+.contactSection .content .infoBox button {
+    display: block;
+    width: 250px;
+    height: 70px;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    background-color: #006666;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 auto 70px;
+}
+
+.contactSection .content .infoBox button:hover {
+    background-color: #0a8585;
+}
+
+.contactSection .content .formBox {
+    width: 520px;
+    margin: 40px;
+    margin-top: 200px;
+    padding: 50px 50px 25px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactSection .content .formBox .name, .contactSection .content .formBox .email {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    padding: 10px 0;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid #CC9966;
+    background: none;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    font-size: 18px;
+    padding: 20px 0;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid #CC9966;
+    background: none;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #D6D4D4;
+}
+
+.contactSection .content .formBox .formRow {
+    width: 100%;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.contactSection .content .formBox .formRow a {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.contactSection .content .formBox .formRow a:hover {
+    color: rgb(245, 158, 11)
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer p {
+    margin-left: 100px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .aboutSection .content {
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 920px) {
+    .menuSection .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuSection .content .rightSide {
+        margin-top: 30px;
+    }
+
+    .menuSection .content .rightSide .coffee {
+        justify-content: flex-start;
+    }
+
+    .menuSection .content .rightSide .coffee img {
+        order: 1;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .menuSection .content .rightSide .coffee .coffeeInfo {
+        order: 2;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contactSection .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactSection .content .formBox {
+        margin-top: 30px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+    footer p {
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    nav {
+        width: 70px;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    nav .menuToggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin-right: 20px;
+        margin-top: 10px;
+        text-align: right;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: right;
+    }
+
+    nav ul li a { 
+        padding: 0;
+        line-height: 0.9;
+    }
+
+    .aboutSection .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .infoBox {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .aboutSection .content, .contactSection, .content {
+        padding: 20px;
+    }
+
+    .infoBox, .contactSection .content .formBox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .menuSection .content .leftSide, .menuSection .content .rightSide {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .headerContent {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contactSection .content .infoBox button {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .menuSection .content .leftSide, .menuSection .content .rightSide {
+        width: 300px;
+    }
+
+    .menuSection .content .coffee {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuSection .content .leftSide .coffee img, .menuSection .content .rightSide .coffee img {
+        margin: 0;
+    }
+
+    .menuSection .content .leftSide .coffee .coffeeInfo, .menuSection .content .rightSide .coffee .coffeeInfo {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .menuSection .content .leftSide, .menuSection .content .rightSide {
+        width: 200px;
+    }
+}

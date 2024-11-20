@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#153677, #4e085f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #153677;
+    font-size: 20px;
+}
+
+h1 span img {
+    width: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.row {
+    width: 100%;
+    margin: 20px 0 30px;
+    background-color: #edeef0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row input {
+    padding: 15px;
+    background: transparent;
+    border: 0;
+    flex: 1;
+    outline: none;
+}
+
+.row button {
+    width: 120px;
+    height: 45px;
+    border: 0;
+    background-color: #FF5845;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.taskRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* margin-top: 20px; */
+    align-items: center;
+}
+
+.checked, .unchecked {
+    width: 20px;
+    cursor: pointer;
+}
+
+.taskRow p {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.taskRow .delete {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.taskRow .delete .erase {
+    width: 15px;
+    cursor: pointer;
+}
